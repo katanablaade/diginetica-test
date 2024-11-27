@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter';
+  outline: none;
+}
+.container {
+  max-width: 1720px;
+  width: 100%;
+  margin: auto;
+  padding: 0 15px;
+}
+.content-wrapper {
+  display: flex;
+}
+.section {
+  margin-top: 24px;
+}
+.cards-wrapper {
+  max-width: 333px;
+}
+
+.side-nav {
+  min-width: 280px;
+}
+.text-field__input:focus {
+  border: 1px solid rgb(115, 175, 244);
+}
+
+@import 'header';
+@import 'card';
+@import 'filter';
+
+@media (max-width: 1445px) {
+  .container {
+    padding: 0 15px;
+    max-width: 1240px;
+    width: 100%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 899.98px;
+  }
+  .side-nav {
+    min-width: 250px;
+  }
+  .header__link {
+    display: none;
+  }
+  .header__content {
+    padding: 12px 5px 12px 5px;
+  }
+  .card__wrapper {
+    display: grid;
+    gap: 24px;
+    margin-left: 36px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 791.98px;
+  }
+  .header__btn:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+  }
+  .card__btn-true:hover {
+    background: rgb(255, 255, 255);
+    color: rgb(115, 151, 245);
+  }
+  .card__content-wrap:hover .card__img-item {
+    width: 60px;
+    height: 60px;
+  }
+  .card__content-wrap:hover .card__description {
+    color: rgb(0, 0, 0);
+  }
+  .header__text-field__input:focus {
+    border: 1px solid rgb(213, 213, 213);
+  }
+  .price__input:focus {
+    border: 1px solid rgb(213, 213, 213);
+  }
+  .brand__clear-input:hover {
+    color: rgb(170, 170, 170);
+  }
+  .brand__custom-checkbox:hover + label::before {
+    border: 1px solid rgb(213, 213, 213);
+  }
+  .categories__item-text:hover {
+    color: rgb(51, 51, 51);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 567.98px;
+  }
+  .side-nav {
+    display: none;
+  }
+  .header__logo {
+    display: none;
+  }
+  .card__wrapper {
+    margin: 0;
+  }
+  .header__text-field__input {
+    margin-right: 0;
+  }
+  .header__content {
+    padding: 12px 5px 12px 5px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 375.98px;
+    margin: auto;
+  }
+  .side-nav {
+    display: none;
+  }
+  .card__wrapper {
+    display: grid;
+    gap: 24px;
+    margin-left: 0;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .section {
+    margin-top: 12px;
+  }
+  .header-mobile__text-field-input {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,202 @@
+.header {
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px 24px 12px 0px;
+  }
+  &__nav {
+    background: rgb(255, 255, 255);
+  }
+  &__link {
+    display: flex;
+    list-style: none;
+    flex-wrap: nowrap;
+    margin: 0;
+    gap: 15px;
+    margin-left: 24px;
+  }
+
+  &__logo {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 14.5px 24px 14.5px 27px;
+    margin-right: 8px;
+  }
+  &__btn {
+    margin: 0;
+    padding: 14px 24px;
+    border: 1px solid rgb(115, 175, 244);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0%;
+    background-color: white;
+    margin-right: 24px;
+    cursor: pointer;
+  }
+  &__logo-img {
+    width: 18px;
+    height: 18px;
+  }
+  &__logo-span {
+    color: black;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+  &__item {
+    color: rgb(57, 57, 57);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+  }
+  &__link-links {
+    text-decoration: none;
+    color: rgb(57, 57, 57);
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0%;
+  }
+  &__btn:hover {
+    background: rgb(115, 151, 245);
+    color: rgb(255, 255, 255);
+  }
+  &__text-field {
+    flex-grow: 1;
+  }
+  &__text-field__input {
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 10px;
+    background: rgb(255, 255, 255);
+    padding: 4px 16px 4px 16px;
+    height: 48px;
+    margin-right: 24px;
+    width: 100%;
+  }
+  &__text-field__icon {
+    position: relative;
+  }
+  &__text-field__icon::before {
+    content: '';
+    color: #bdbdbd;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 17.49px;
+    height: 17.49px;
+    left: 25px;
+    top: 25px;
+    transform: translateY(-50%);
+  }
+  &__text-field__icon &__text-field__input {
+    padding-left: 3.5rem;
+  }
+  &__text-field__icon_search::before {
+    background-image: url(../logo/search.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  &__text-field__input:focus {
+    border: 1px solid rgb(115, 175, 244);
+  }
+}
+
+.header-mobile {
+  &__hr {
+    display: block;
+    width: 307px;
+    height: 1px;
+    background: rgb(213, 213, 213);
+    margin-top: 6px;
+    margin-left: 40px;
+    margin-right: auto;
+  }
+  &__text-field-input {
+    border: none;
+    background: rgb(255, 255, 255);
+    padding: 4px 16px 4px 40px;
+    height: 38px;
+    margin-right: 24px;
+    width: 100%;
+    margin-top: 8px;
+  }
+  &__text-field-icon {
+    position: relative;
+  }
+  &__text-field-icon::before {
+    content: '';
+    color: #bdbdbd;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 17.49px;
+    height: 17.49px;
+    left: 0px;
+    top: 27px;
+    transform: translateY(-50%);
+  }
+  &__text-field-icon .text-field-input {
+    padding-left: 3.5rem;
+  }
+  &__text-field-icon-search::before {
+    background-image: url(../logo/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &__text-field-icon2::before {
+    content: '';
+    position: absolute;
+    display: none;
+    align-items: center;
+    width: 17.49px;
+    height: 17.49px;
+    right: 92px;
+    top: 27px;
+    transform: translateY(-50%);
+  }
+  &__text-field-icon-close::before {
+    background-image: url(../logo/close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 1;
+  }
+  &__text-field-input:focus + &__text-field-icon2::before {
+    display: flex;
+  }
+  &__btn {
+    position: absolute;
+    right: 0px;
+    top: 8px;
+    border-radius: 5px;
+    background: rgb(115, 151, 245);
+    padding: 12px 16px 12px 16px;
+    color: rgb(255, 255, 255);
+    font-family: PT Sans;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 14px;
+    border: none;
+  }
+  &__title {
+    margin-top: 12px;
+    color: rgb(51, 51, 51);
+    font-family: PT Sans;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+}

@@ -1,42 +1,32 @@
 <template>
   <main>
-    <section class="section">
+    <section class="section cards">
       <div class="container">
-        <div class="content-wrapper">
-          <aside class="side-nav">
-            <categories-component />
-            <price-component />
-            <brand-component />
-            <size-component />
-          </aside>
-
-          <div class="card__wrapper">
-            <card-item-component
-              v-for="card in goods"
-              :key="card.id"
-              :card="card"
-            />
-          </div>
+        <h1 class="card__main-title">Новости и статьи</h1>
+        <card-btn-component />
+        <div class="card__wrapper">
+          <card-item-component
+            v-for="card in goods"
+            :key="card.id"
+            :card="card"
+          />
         </div>
+        <pagination-component />
       </div>
     </section>
   </main>
 </template>
 
 <script>
-import CategoriesComponent from '@/components/CategoriesComponent.vue';
 import CardItemComponent from '@/components/CardItemComponent.vue';
-import PriceComponent from '@/components/PriceComponent.vue';
-import BrandComponent from '@/components/BrandComponent.vue';
-import SizeComponent from '@/components/SizeComponent.vue';
+import CardBtnComponent from '@/components/CardBtnComponent.vue';
+import PaginationComponent from '@/components/PaginationComponent.vue';
 
 export default {
   components: {
-    CategoriesComponent,
     CardItemComponent,
-    PriceComponent,
-    BrandComponent,
-    SizeComponent,
+    CardBtnComponent,
+    PaginationComponent,
   },
   computed: {
     goods() {
